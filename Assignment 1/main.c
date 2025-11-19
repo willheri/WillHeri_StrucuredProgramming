@@ -1,26 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main() {
+    float radius, surfaceArea;
+    const float PI = 3.14159;
 
-    int a = 0,b = 0, c;
-    printf("Enter your first number: ");
-    scanf("%d",&a);
+    printf("Enter the radius of the sphere: ");
+    scanf("%f", &radius);
 
-    printf("Enter the second number: ");
-    scanf("%d",&b);
+    surfaceArea = 4 * PI * radius * radius;
 
-    c = a+b;
-    printf("a+b = %d \n",c);
-    c = a-b;
-    printf("a-b = %d \n",c);
-    c = a*b;
-    printf("a*b = %d \n",c);
-    c = a/b;
-    printf("a/b = %d \n",c);
-    c = a%b;
-    printf("Remainder when a divided by b = %d \n",c);
+    printf("Surface area of the sphere is: %.2f\n", surfaceArea);
 
     return 0;
 }
