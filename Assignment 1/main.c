@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    float radius, surfaceArea;
-    const float PI = 3.14159;
+int main()
+{
+    char name[100];
+    int length;
 
-    printf("Enter the radius of the sphere: ");
-    scanf("%f", &radius);
+    printf("Enter your name:");
+    fgets(name, sizeof(name),stdin);
 
-    surfaceArea = 4 * PI * radius * radius;
+    name[strcspn(name,"\n")] = '\0';
 
-    printf("Surface area of the sphere is: %.2f\n", surfaceArea);
+    length = strlen(name);
+    printf("Length of the string: %d\n", length);
 
     return 0;
 }
+
+
+
 
